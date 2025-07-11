@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col justify-between">
       <header className="flex justify-center items-center bg-white p-3 shadow-md">
-        <p className="text-sm text-gray-500 border-b border-gray-200">T.P. N°2 - Grupo 35</p>
+        <p className="text-md font-semibold text-gray-500 border-b border-gray-200">T.P. N°2 - Grupo 35</p>
       </header>
 
       <div className="min-h-screen flex items-center justify-center">
@@ -37,12 +37,11 @@ const Home = () => {
           </div>
 
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
-            Explorador Mundial
+            Descrube las últimas películas de cada país.
           </h1>
           
           <p className="text-gray-600 mb-8 leading-relaxed">
-            Descubre información detallada sobre países de todo el mundo. 
-            Encuentra datos, estadísticas y curiosidades de cualquier nación.
+            Busca las últimas películas del país de tu elección.
           </p>
 
           <button

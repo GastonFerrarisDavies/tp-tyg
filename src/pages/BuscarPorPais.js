@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import traerPeli from '../controllers/traerPeliStrapi';
 import subirPeli from '../controllers/subirPeli';
 import fetchPeliculas from '../controllers/traerPeliApi';
 
 function BuscarPorPais() {
+    const navigate = useNavigate();
     const apiUrl = process.env.REACT_APP_API_KEY_TMDBSTRAPI_API_URL;
     const apiToken = process.env.REACT_APP_API_TOKEN;
     const [pais, setPais] = useState('');
@@ -34,8 +36,21 @@ function BuscarPorPais() {
 
 
     return (
-        <div className="p-4 md:p-8 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-            <div className="container mx-auto">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
+            <nav className="bg-white shadow-md p-4">
+                <div className="container mx-auto flex justify-between items-center">
+                    <h1 className="text-xl font-bold text-gray-500">TyG - Grupo 35</h1>
+                    <button
+                        onClick={() => navigate('/')}
+                        className="w-full md:w-auto cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:scale-100 disabled:hover:shadow-none text-lg"
+                    >
+                        Volver
+                    </button>
+                </div>
+            </nav>
+            
+            <div className="flex-1 p-4 md:p-8">
+                <div className="container mx-auto">
 
             
             <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-6">
@@ -121,7 +136,6 @@ function BuscarPorPais() {
                                 <p className='text-sm text-gray-500'>Fecha de estreno: {pelicula.fechaEstreno}</p>
                                 <p className='text-sm text-gray-500'>Lenguaje de Origen: {pelicula.lenguajeOrigen}</p>
                             </div>
-
                         </div>
                         <div className='object-fit w-24'>
                             <img src={`https://image.tmdb.org/t/p/w500${pelicula.imagen}`} alt={pelicula.title} className='w-full object-cover' />
@@ -129,7 +143,7 @@ function BuscarPorPais() {
                     </div>
                 ))}
             </div>
-
+                </div>
             </div>
         </div>
     );
