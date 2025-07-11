@@ -9,8 +9,14 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col justify-between">
+      <header className="flex justify-center items-center bg-white p-3 shadow-md">
+        <p className="text-sm text-gray-500 border-b border-gray-200">T.P. N°2 - Grupo 35</p>
+      </header>
+
+      <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full mx-4">
+
         <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
           <div className="mb-8">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -68,6 +74,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
+    <footer className="flex justify-center items-center bg-white p-3 shadow-md">
+      <p className="text-sm text-gray-500 border-t border-gray-200">TyG Web - 2025</p>
+    </footer>
     </div>
   );
 };

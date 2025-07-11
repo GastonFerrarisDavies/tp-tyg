@@ -6,7 +6,7 @@ import fetchPeliculas from '../controllers/traerPeliApi';
 function BuscarPorPais() {
     const apiUrl = process.env.REACT_APP_API_KEY_TMDBSTRAPI_API_URL;
     const apiToken = process.env.REACT_APP_API_TOKEN;
-    const [pais, setPais] = useState('US');
+    const [pais, setPais] = useState('');
     const [mensaje, setMensaje] = useState('');
     const [cargando, setCargando] = useState(false);
     const [movies, setMovies] = useState([]);
@@ -34,7 +34,7 @@ function BuscarPorPais() {
 
 
     return (
-        <div className="p-4 md:p-8 bg-gray-100 min-h-screen">
+        <div className="p-4 md:p-8 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
             <div className="container mx-auto">
 
             
